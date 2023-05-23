@@ -5,9 +5,38 @@ class Board
 
     def initialize
         @rows = Array.new(8) {Array.new(8)}
-        @rows.each do |pos|
-            if pos == 0 || pos == 1
-                rows
+
+
+        @rows.each_with_index do |row, idx|
+            row.each_with_index do | col, idx2|
+                if [0,1,6,7].include?(idx)
+                    @rows[idx][idx2] = Piece.new(:white)
+                end
+            end
+        end
+        
+            # (0..7).each do |pos|
+        #     @rows[pos] = "Test"
+        # end
+
+            # if pos == 0 || pos == 1
+        #         7.times do
+        #             @rows[pos] = "Test"
+        #         end
+        #     end
+        # end
+
+            # (0..7).each do |pos|
+            #     if pos == 0 || pos == 7
+            #         row[pos] = "Test"
+            #     end
+            # end
+
+
+
+
+            # if pos == 0 || pos == 1
+            #     rows
 
 
             # row.each_with_index do |ele,idx2|
@@ -19,7 +48,7 @@ class Board
 
 
 
-        end
+        # end
 
     end
     #     if row == 0 || row == 1
@@ -58,6 +87,8 @@ class Board
 
 
     def move_piece(start_pos, end_pos)
+        raise "no piece there" if @row.start_pos == nil
+
 
     end
 
