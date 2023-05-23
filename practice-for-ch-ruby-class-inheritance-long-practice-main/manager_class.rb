@@ -5,7 +5,8 @@ class Manager < Employee
 
   def initialize(name,title,salary,boss,*employees)
     super(name,title,salary,boss)
-    @employees = [Employee.new(employee)]
+    @employees = []
+    employees.each {|employee| @employees << employee }
   end
 
   def bonus(multiplier)
