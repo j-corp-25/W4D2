@@ -4,16 +4,16 @@ require_relative "piece"
 class Board
 
     def initialize
-        @rows = Array.new(8) {Array.new(8, [])}
-        @rows.each do |row|
-            2.times do 
-                row << Piece.new(:white)
-            end
+        @rows = Array.new(8) {Array.new(8)}
+        # @rows.each do |row|
+        #     2.times do 
+        #         row << Piece.new(:white)
+        #     end
             #  @rows.index(row)
             # row.each do |ele|
             #     p ele.pos
             # end
-        end
+        # end
 
     end
 
