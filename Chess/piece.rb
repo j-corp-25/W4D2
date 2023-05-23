@@ -6,12 +6,19 @@ class Piece
         # @pos = [pos]
     end
 
-    def moves
+    def to_s(symbol)
+        self.to_s = symbol
+    end
+
+    def empty?
+    end
+
+    def valid_moves
 
     end
 
+    def pos=(val)
 
-
-
+    end
 
 end

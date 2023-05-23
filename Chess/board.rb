@@ -1,4 +1,5 @@
 require_relative "piece"
+require_relative "NullPiece"
 
 
 class Board
@@ -11,6 +12,8 @@ class Board
             row.each_with_index do | col, idx2|
                 if [0,1,6,7].include?(idx)
                     @rows[idx][idx2] = Piece.new(:white)
+                # else
+                #     @rows[idx][idx2] = NullPiece.new
                 end
             end
         end
