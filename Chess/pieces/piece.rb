@@ -1,9 +1,10 @@
 class Piece
 
-    def initialize(color, board, pos)
+    def initialize(color, board, pos,symbol)
         @color = color
         @board = board
         @pos = pos
+        @symbol = symbol
     end
 
     def to_s(symbol)
@@ -19,6 +20,10 @@ class Piece
 
     def pos=(val)
 
+    end
+
+    def inspect
+        return @symbol
     end
 
 end
