@@ -9,17 +9,12 @@ class Piece
     end
 
     def empty?
-        if self.pos == NullPiece
-            return true
-        else
-            false
-        end
-
+       false
     end
 
     def valid_move?(move)
 
-        if ((move[0] >= 0 && move[1] >=0 )) && ((move[1] <= 7 && move[0]<= 7)) && move.empty?
+        if ((move[0] >= 0 && move[1] >=0 )) && ((move[1] <= 7 && move[0]<= 7)) && (@board[move].empty?)
             return true
         else
             false

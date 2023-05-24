@@ -75,6 +75,11 @@ module Slideable
 
       # in a loop:
       while current_pos.valid_move?
+        current_row += dx
+        current_col += dy
+        moves << [current_row, current_col]
+      end
+    end
         # continually increment the piece's current row and current column to generate a new position
         # stop looping if the new position is invalid (not on the board); the piece can't move in this direction
         # if the new position is empty, the piece can move here, so add the new position to the moves array
@@ -83,7 +88,6 @@ module Slideable
         # if the new position is occupied with a piece of the same color, stop looping
 
       # return the final moves array
-    end
   end
 
 
