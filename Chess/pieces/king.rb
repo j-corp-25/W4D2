@@ -1,11 +1,11 @@
-require "stepable"
+# require "stepable"
 require_relative "piece"
 
 class King < Piece
 
-include Stepable
+# include Stepable
 
-def initialize
+def initialize(color, board, pos,symbol)
     @symbol = "♚"
 end
 

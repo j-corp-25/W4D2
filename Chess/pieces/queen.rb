@@ -1,11 +1,11 @@
-require "slideable"
+# require "slideable"
 require_relative "piece"
 
 class Queen < Piece
 
-include Slideable
+# include Slideable
 
-def initialize
+def initialize(color, board, pos,symbol)
     @symbol = "♛"
 end
 
