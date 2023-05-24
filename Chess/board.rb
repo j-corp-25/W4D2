@@ -1,5 +1,5 @@
-require_relative "piece"
-require_relative "NullPiece"
+require_relative "pieces/piece"
+require_relative "pieces/NullPiece"
 
 
 class Board
@@ -10,13 +10,30 @@ class Board
 
         @rows.each_with_index do |row, idx|
             row.each_with_index do | col, idx2|
-                if [0,1,6,7].include?(idx)
-                    @rows[idx][idx2] = Piece.new(:white)
-                # else
-                #     @rows[idx][idx2] = NullPiece.new
+                if idx == 1
+                    @rows[idx][idx2] = Pawn.new(:black, self, [idx, idx2], "♟︎")
+                elsif idx == 6
+                    @rows[idx][idx2] = Pawn.new(:white, self, [idx, idx2])
+                else
+                    @rows[idx][idx2] = NullPiece.instance
                 end
             end
         end
+        # def initialize
+        #     @rows = Array.new(8) {Array.new(8)}
+    
+    
+        #     @rows.each_with_index do |row, idx|
+        #         row.each_with_index do | col, idx2|
+        #             if [0,1].include?(idx)
+        #                 @rows[idx][idx2] = Piece.new(:black, self, [idx, idx2])
+        #             elsif [6,7].include?(idx)
+        #                 @rows[idx][idx2] = Piece.new(:white, self, [idx, idx2])
+        #             else
+        #                 @rows[idx][idx2] = NullPiece.instance
+        #             end
+        #         end
+        #     end
 
     end
 
