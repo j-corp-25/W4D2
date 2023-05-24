@@ -1,3 +1,4 @@
+
 require_relative "employee_class"
 
 class Manager < Employee
