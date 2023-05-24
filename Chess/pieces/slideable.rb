@@ -68,7 +68,10 @@ module Slideable
       moves = []
 
       # get the piece's current row and current column
-      self.pos
+      current_pos = self.pos
+      current_row = current_pos[0]
+      current_col = current_col[1]
+
 
       # in a loop:
         # continually increment the piece's current row and current column to generate a new position
