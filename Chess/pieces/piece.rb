@@ -17,11 +17,12 @@ class Piece
 
     end
 
-    def valid_move?(move)     
-        if ((0..7).include?(move[0]) && (0..7).include?(move[1])) #(move.empty?) && 
+    def valid_move?(move)
+
+        if ((move[0] >= 0 && move[1] >=0 )) && ((move[1] <= 7 && move[0]<= 7)) && move.empty?
             return true
         else
-           return false
+            false
         end
     end
 

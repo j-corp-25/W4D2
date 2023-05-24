@@ -74,6 +74,7 @@ module Slideable
 
 
       # in a loop:
+      while current_pos.valid_move?
         # continually increment the piece's current row and current column to generate a new position
         # stop looping if the new position is invalid (not on the board); the piece can't move in this direction
         # if the new position is empty, the piece can move here, so add the new position to the moves array
